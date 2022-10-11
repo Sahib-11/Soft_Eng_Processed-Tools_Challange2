@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "Person")
+@Table(name = "person")
 public class Person {
 
     @Id
@@ -26,7 +26,7 @@ public class Person {
     private String address;
 
     @Column(name = "postcode")
-    private int postcode;
+    private String postcode;
 
     @Column(name = "age")
     private int age;
@@ -37,8 +37,8 @@ public class Person {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "phoneno")
-    private int phoneno;
+    @Column(name = "phoneNo")
+    private String phoneNo;
 
     public long getId() {
         return id;
@@ -60,11 +60,11 @@ public class Person {
         this.address = address;
     }
 
-    public int getPostcode() {
+    public String getPostcode() {
         return postcode;
     }
 
-    public void setPostcode(int postcode) {
+    public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
 
@@ -92,11 +92,11 @@ public class Person {
         this.email = email;
     }
 
-    public int getPhoneno() {
-        return phoneno;
+    public String getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setPhoneno(int phoneno) {
-        this.phoneno = phoneno;
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
     }
 }
